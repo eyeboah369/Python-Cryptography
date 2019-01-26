@@ -58,3 +58,5 @@ There are two types of symmetric ciphers:
 	- Block Ciphers	
 		These can only operate on fixed amounts of data and the most important block cipher algorithm
 		is AES (Advanced Encryption Standard ====> block size 128 bits (16 bytes))
+		
+"""
