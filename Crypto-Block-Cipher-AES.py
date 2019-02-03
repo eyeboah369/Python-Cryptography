@@ -25,10 +25,10 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
 data = b"This is a swell day for some encryption!"		#Data to be encrypted
-key = get_random_bytes(16)								#Generation of a 16 byte key (128 bits)
-cipher = AES.new(key, AES.MODE_EAX)						#Generation of the AES cipher algorithm with IV EAX Mode
-nonce = cipher.nonce									#Creation of the nonce object which is needed along with the IV
-ciphertext = cipher.encrypt(data)						#Encryption of the message stored in data
+key = get_random_bytes(16)					#Generation of a 16 byte key (128 bits)
+cipher = AES.new(key, AES.MODE_EAX)				#Generation of the AES cipher algorithm with IV EAX Mode
+nonce = cipher.nonce						#Creation of the nonce object which is needed along with the IV
+ciphertext = cipher.encrypt(data)				#Encryption of the message stored in data
 
 print("This is the encrypted data: " + str(ciphertext))
 
@@ -38,9 +38,9 @@ print("This is the encrypted data: " + str(ciphertext))
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
-key = get_random_bytes(16)								#Creation of the 16 byte key (128 bits)
+key = get_random_bytes(16)					#Creation of the 16 byte key (128 bits)
 cipher1 = AES.new(key, AES.MODE_EAX, nonce=nonce)		#Creation of the AES cipher object for decryption using noce and IV
-decrypted = cipher1.decrypt(ciphertext)					#Prints out the decrypted data
+decrypted = cipher1.decrypt(ciphertext)				#Prints out the decrypted data
 print("This is the data decrypted: " + str(decrypted))
 
 
